@@ -1,0 +1,42 @@
+/*
+Project:        jenkins-basic-template
+Author:         David Arango Medina
+Description:    This jenkinsfile contains the basic structure
+                Este jenkinsfile contiene la estructura básica
+Date:           March, 2022 - Marzo 2022
+Dependencies:   NA
+*/
+
+
+//This indicates the next words, declarations, steps, belong to a Jnekins pipeline
+//Esto indica que las siguientes palabras, declaraciones, pasos, pertenecen a un piepline de Jenkins
+pipeline {
+
+    //Define the node where the jenkins job will be executed, in this case on 'any' agent available 
+    //Define el nodo donde el trabajo de jenkins será ejecutado, en este caso en cualquier agente disponible
+    agent any
+
+
+    //Agrupa los pasos a ejecutar e indica que desde este punto serán declarados
+    //Group the steps to execute and indicates that from this point they will be declared
+    stages {
+
+
+        //Declare a group of steps that belong to the same context
+        //Declarar un grupo de pasos que pertenecen al mismo contexto
+        stage('Greet') {
+            steps {
+
+                //A single command can be consider as a step, even Jenkins has several pre-build steps with reserved words
+                //Un solo comando se puede considerar como un paso, incluso Jenkins tiene varios pasos preconstruidos con palabras reservadas
+                echo "Hello world.!"               
+            }
+        }
+
+        stage('Saludar') {
+            steps {
+                echo "Hola mundo.!"                
+            }
+        }          
+    }
+}
