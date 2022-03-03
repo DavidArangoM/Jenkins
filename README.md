@@ -1,2 +1,2 @@
 # Jenkins
-This repository contains several uses case to use Jenkinsfile
+This repository contains several use cases to use Jenkinsfile
