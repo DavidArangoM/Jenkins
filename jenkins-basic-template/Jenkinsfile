@@ -1,0 +1,29 @@
+/*
+Project:        jenkins-basic-template
+Author:         David Arango Medina
+Description:    This jenkinsfile contains the basic structure
+                Este jenkinsfile contiene la estructura básica
+Date:           March, 2022 - Marzo 2022
+Dependencies:   NA
+*/
+
+
+pipeline {
+
+    agent any
+    
+    stages {
+
+        stage('Greet') {
+            steps {
+                echo "Hello world.!"               
+            }
+        }
+
+        stage('Saludar') {
+            steps {
+                echo "Hola mundo.!"                
+            }
+        }          
+    }
+}
